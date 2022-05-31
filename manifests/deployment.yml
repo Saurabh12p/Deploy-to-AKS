@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: saurabhpdeploytoaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: saurabhpdeploytoaks
+  template:
+    metadata:
+      labels:
+        app: saurabhpdeploytoaks 
+    spec:
+      containers:
+        - name: saurabhpdeploytoaks 
+          image: regsaurabh.azurecr.io/saurabhpdeploytoaks
+          ports:
+          - containerPort: 80
